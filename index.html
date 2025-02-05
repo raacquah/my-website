@@ -4,20 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richmond Acquah's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #000000;
-            font-color: #fff;
-        }
-        header {
-            background: #0077b6;
-            color: #000000;
-            padding: 20px 0;
-            text-align: center;
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f0f8ff;
+        color: #333;
+    }
+       
+    .navbar {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: auto;
+        height: auto;
+        background: #0077b6;
+        border-radius: 30px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-item {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ffffff;
+        color: #0077b6;
+        font-size: 20px;
+        margin: 0 5px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.3s ease;
+    }
+
+.nav-item:hover {
+    background: #cfdddb;
+    transform: scale(1.1);
+}
+
+.nav-item i {
+    font-size: 20px;
+}
+
+.nav-item.active {
+    background: #cfdddb;
+    transform: scale(1.1);    
         }
         header h1 {
             margin: 0;
@@ -29,65 +68,125 @@
             font-size: 1.2rem;
         }
         section {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #0077b6;
-            margin-bottom: 10px;
-            text-align: center;
-            
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .button {
-            display: inline-block;
-            background: #0077b6;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .button:hover {
-            background: #005f87;
-        }
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        color: #0077b6;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2.5rem;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: #0077b6;
+        margin: 10px auto 0;
+    }
+        
+    .button {
+        display: inline-block;
+        background: #0077b6;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .button:hover {
+        background: #005f87;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-item {
+        background: #f0f8ff;
+        display: flex;
+        transition: all 0.3s ease;
+    }
+
+   
+
+    .skill-item i {
+        display: flex;
+        font-size: 30px;
+        color: #0077b6;
+        margin-bottom: 10px;
+    }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Richmond Asamoah Acquah</h1>
-        <p>Orange County, California | <a href="mailto:racquah@soka.edu">racquah@soka.edu</a> | +1 (949) 315-0371</p>
-        <p class="social-links"><a href="https://linkedin.com/in/racquah" target="_blank">LinkedIn Profile</a> | <a href="https://github.com/raacquah/Portfolio" target="_blank">GitHub</a></p>
-    </header>
-<hr>
-    <section>
+        <header class="header">
+            <nav class="navbar">
+                <a href="#about" class="nav-item" id="about-link">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#education" class="nav-item" id="education-link">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="#projects" class="nav-item" id="projects-link">
+                    <i class="fas fa-diagram-project"></i>
+                </a>
+                <a href="#contact" class="nav-item" id="contact-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </nav>
+        </header>
+
+
+    <section id="about">
         <h2>About Me</h2>
         <p>I am a sophomore at Soka University studying Mathematics and Economics. Passionate about software engineering, data science, and product management, I bring a unique blend of technical skills and problem-solving expertise to every project.</p>
     </section>
-<hr>
-    <section>
+
+    <section id="education">
         <h2>Education</h2>
         <p><strong>Soka University of America</strong>, Aliso Viejo, CA (Graduation: May 2027)</p>
         <p>B.A. in Liberal Arts – Mathematics and Economics</p>
         <p><strong>Honors:</strong> Dean’s List, Soka Merit Scholarship, Resident Assistant (RA) Scholarship</p>
     </section>
-<hr>
-    <section>
+
+    <section id="tech-skills">
         <h2>Technical Skills</h2>
         <ul>
-            <li>Programming Languages: Python, R, SQL</li>
+            <li>Programming Languages: Python (Intermediate), R (Intermediate), SQL (Intermediate)</li>
             <li>Certifications: Python Proficiency, Google Project Management</li>
             <li>Interests: Software Engineering, Data Science, Product Management</li>
         </ul>
+        <div class="skills-container">
+            <div class="skills-grid">
+                
+                <div class="skill-item">
+                    <i class="fab fa-r"></i>
+                    <span>R</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-code"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+        <h2>Download My Resume</h2>
+        <a href="Acquah_Richmond_Resume.pdf" class="button" target="_blank">Download Resume</a>
     </section>
-<hr>
-    <section>
+
+    <section id="experience">
         <h2>Experience</h2>
         <p><strong>Program Manager Intern</strong> | Glaukos Corporation, Aliso Viejo, CA (Jun 2024 – Aug 2024)</p>
         <ul>
@@ -96,8 +195,8 @@
             <li>Collaborated with cross-functional teams to enhance job description accuracy, improving training processes.</li>
         </ul>
     </section>
-<hr>
-    <section>
+
+    <section id="projects">
         <h2>Projects</h2>
         <p><strong>Cohort Analysis and Customer Market Segmentation</strong></p>
         <ul>
@@ -115,8 +214,8 @@
             <li>To be updated: <a href="#">Project URL</a></li>
         </ul>
     </section>
-<hr>
-    <section>
+
+    <section id="activities">
         <h2>Extracurricular Activities</h2>
         <ul>
             <li>Vice Chair, Google Developer Groups (Soka Chapter): Coordinated events and boosted member engagement by 35%.</li>
@@ -125,9 +224,12 @@
         </ul>
     </section>
 
-    <section>
-        <h2>Download My Resume</h2>
-        <a href="Acquah_Richmond_Resume.pdf" class="button" target="_blank">Download Resume</a>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:racquah@soka.edu">racquah@soka.edu</a></p>
+        <p>Phone: +1 (949) 315-0371</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/racquah" target="_blank">racquah</a></p>
+        <p>GitHub: <a href="https://github.com/raacquah" target="_blank">raacquah</a></p>
     </section>
 </body>
 </html>
